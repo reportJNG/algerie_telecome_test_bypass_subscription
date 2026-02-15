@@ -18,7 +18,8 @@ const main = () => {
 const howmuch = (n) => {
   let j = 0;
   while (j < n) {
+    j++;
     console.log(main());
   }
-  j++;
 };
+howmuch(2);
