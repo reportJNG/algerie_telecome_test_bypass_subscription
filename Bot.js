@@ -1,25 +1,19 @@
-//#functions
-//main
-//get one random num from [0-9]
-//build a array of random numbers
+const expiredcard = [
+  "9942629644461006",
+  "7197933484649693",
+  "2797951870589684",
+  "9922621632669537",
+  "0601042289361473",
+  "3510179894223166",
+  "6430233503537673",
+];
 
-const main = () => {
-  const lengthcard = 15;
-  let newarr = "";
-  for (let i = 0; i < lengthcard; i++) {
-    let random_number = Math.floor(Math.random() * 10);
-    newarr += random_number.toString();
-  }
-  return {
-    valid: newarr,
-  };
-};
+function random16Digit() {
+  return Math.floor(Math.random() * 1e16)
+    .toString()
+    .padStart(16, "0");
+}
 
-const howmuch = (n) => {
-  let j = 0;
-  while (j < n) {
-    j++;
-    console.log(main());
-  }
-};
-howmuch(2);
+for (let i = 0; i < 10; i++) {
+  console.log(random16Digit());
+}
